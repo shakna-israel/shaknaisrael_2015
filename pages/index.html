@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block fonts %}
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block css %}
+@media(min-width:30em){.row{width:100%;display:table;table-layout:fixed}.col{display:table-cell}}
+h1 {
+  font-family: 'Vollkorn', serif;
+}
+p a {
+  font-family: 'Lato', sans-serif;
+}
+.nav {
+  padding: 0.5em;
+  background-color: rgba(20, 27, 25, 0.2);
+  background: rgba(20, 27, 25, 0.9);
+  color: rgba(255, 255, 231, 0.2);
+}
+div.row.nav {
+  padding:0.5em;
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+}
+.row {
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.col {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.top-minus {
+  margin-top: -8em;
+}
+.nav a {
+  color: rgba(255, 255, 231, 0.9);
+  padding: 0.5em;
+  background-color: rgba(20, 27, 25, 0.9);
+  background: rgba(20, 27, 25, 0.9);
+  color: rgba(255, 255, 231, 0.9);
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+}
+.home-img {
+  width:20em;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+.center {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.main {
+  display:block;
+  margin-top:10vh;
+  height: 25vh;
+  background-color: rgba(20, 27, 25, 0.9);
+  background: rgba(20, 27, 25, 0.9);
+  color: rgba(255, 255, 231, 0.9);
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;
+}
+h1.main2 {
+  padding-top:5vh;
+}
+{% endblock %}
+
+{% block nav %}
+<div class="row nav">
+
+<div class="col nav">
+<a href="{% url '/' %}">Home</a>
+</div>
+
+<div class="col nav">
+<a href="{% url '/portfolio.html' %}">Portfolio</a>
+</div>
+
+<div class="col nav">
+<a href="{% url '/about.html' %}">About</a>
+</div>
+
+<div class="col nav">
+<a href="{% url '/opensource.html' %}">Open Source</a>
+</div>
+
+<div class="col nav">
+<a href="{% url '/contact.html' %}">Contact</a>
+</div>
+
+</div> <!-- End Row -->
+{% endblock %}
+
+{% block description %}
+Design, programming and the web.
+{% endblock %}
+
+{% block title %}
+Shakna Israel
+{% endblock %}
+
+{% block body %}
+<div class="row">
+<div class="col main">
+<h1 class="center main2">Shakna Israel</h1>
+<p class="center main2">Unifying Statement goes here</p>
+</div> <!-- End Col -->
+</div> <!-- End Row -->
+<div class="row">
+  <div class="col">
+    <h1>A Modern Approach</h1>
+    <object class="home-img" data="{% static "/static/images/expert.svg" %}" type="image/svg+xml">
+    </object>
+    <p class="top-minus">Expert in programming with some of today's web languages, HTML5, CSS3, JS, and Python, any tool or function becomes a possibility.</p>
+    <p>See the <a href="{% url '/portfolio.html' %}">portfolio</a>.</p>
+  </div> <!-- End Col -->
+
+  <div class="col">
+    <h1>Web Development</h1>
+    <img src="" alt="Web Programming" />
+    <p>Development for the Web comes in two flavours:</p>
+    <ul>
+    <li>Backend</li>
+    <li>Frontend</li>
+    </ul>
+    <p>Whether you're looking to integrate a DataBase into the backend, deploy a REST API, or you're looking to reskin how a website looks, your branding is in safe hands.</p>
+  </div> <!-- End Col -->
+
+  <div class="col">
+    <h1>Applications</h1>
+    <img src="" alt="Programming" />
+    <p>There comes a time when the tools you have, or not enough. This usually becomes the time when a friend of a friend builds an application for you, that tends to be full of holes.</p>
+    <p>Rather than risk losing your workflow, or falling short of your KPIs, make sure the job gets done right.</p>
+    <p>Follow a consultant and their process, to ensure that whatever the final product might be - that it meets the right criteria, and is compliant to <em>your</em> workplace.</p>
+  </div> <!-- End Col -->
+</div> <!-- End Row -->
+{% endblock %}
