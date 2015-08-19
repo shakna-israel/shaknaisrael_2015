@@ -1,0 +1,14 @@
+/*- Custom style -*/
+
+// -- Put custom style under this point -- //
+#header-nav::before {
+    display: block;
+    content: "";
+    width: 10rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: #D5D5D5;
+}
+
+//Ungrid.css, MIT License, Chris Nager
+@media(min-width:30em){.row{width:100%;display:table;table-layout:fixed}.col{display:table-cell}}

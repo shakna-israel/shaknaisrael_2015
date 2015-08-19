@@ -1,0 +1,20 @@
+<header id="header">
+
+	<h1><a href="/">{{site.title}}</a></h1>
+        <small>{{site.description}}</small>
+        </br>
+        <div id="header-nav">
+	{% for page in site.pages %}
+            {% if page.layout == "page" %}
+                {% if page.title != "Contact" %}
+                    <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% for page in site.pages %}
+            {% if page.title == "Contact" %}
+                <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}" title="{{ page.title }}">{{ page.title }}</a>      
+            {% endif %}
+        {% endfor %}
+        </div>
+</header>

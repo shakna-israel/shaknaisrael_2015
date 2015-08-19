@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Shakna Israel</title>
+ <link href="http://www.shaknaisrael.com/atom.xml" rel="self"/>
+ <id>http://www.shaknaisrael.com</id>
+ <updated>2015-08-20T00:38:13+10:00</updated>
+ <author>
+   <name>James Milne</name>
+   <uri>http://www.shaknaisrael.com</uri>
+   <email>contact@shaknaisrael.com</email>
+ </author>
+
+ 
+
+ <entry>
+   <title>Hello World</title>
+   <link href="http://www.shaknaisrael.com/hello-world"/>
+   <id>http://www.shaknaisrael.com/hello-world</id>
+   <updated>2015-02-10T00:00:00+11:00</updated>
+   <content type="html">&lt;p&gt;Hello world!&lt;/p&gt;
+</content>
+ </entry>
+
+ 
+
+</feed>
